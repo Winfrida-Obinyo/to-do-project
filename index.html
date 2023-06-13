@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1 class="to-do">To-do List</h1>
+
+<form id="addTaskForm">
+  <label for="userId">User ID:</label>
+  <br><br>
+  <input type="text" id="userId" required>
+  <br><br>
+  <label for="task">Task:</label>
+  <br><br>
+  <input type="text" id="task" required>
+  <br><br>
+  <label for="description">Description:</label>
+   <br><br>
+  <input type="text" id="description" required>
+  <br><br>
+ <label for="completeOnDate">Complete On Date:</label>
+ <br><br>
+ <input type="date" id="completeOnDate">
+ <br><br>
+  <label for="status">Status:</label>
+  <br><br>
+  <select id="status">
+    <option value="Not Started">Not Started</option>
+    <option value="In Progress">In Progress</option>
+    <option value="Completed">Completed</option>
+  </select>
+  <br><br>
+  <label for="priority">Priority:</label>
+  <br><br>
+  <select id="priority">
+    <option value="Low">Low</option>
+    <option value="Medium">Medium</option>
+    <option value="High">High</option>
+  </select>
+  <br><br>
+  <label for="taskValue">Task Value:</label>
+  <br><br>
+  <select id="taskValue">
+    <option value="Easy/Low">Easy/Low</option>
+    <option value="Medium">Medium</option>
+    <option value="Easy/High">Easy/High</option>
+  </select>
+  <br><br>
+  <label for="dueDate">Due Date:</label>
+  <br><br>
+  <input type="date" id="dueDate">
+  <br><br>
+  <label for="taskPercentage">Task %:</label>
+  <br><br>
+  <input type="number" id="taskPercentage" min="0" max="100">
+  <br><br>
+  <label for="additionalNotes">Additional Notes:</label>
+  <br><br>
+  <textarea id="additionalNotes"></textarea>
+  <br><br>    
+  <button type="submit">Add Task</button>
+</form>
+<h2 class="task">Tasks</h2>
+<table id="taskTable">
+  <thead>
+    <tr>
+      <th class="description">Description</th>
+      <th class="status">Status</th>
+      <th class="priority">Priority</th>
+      <th class="due">Due Date</th>
+      <th class="task">Task %</th>
+      <th class="add">Additional Notes</th>
+      <th class="action">Actions</th>
+    </tr>
+  </thead>
+  <tbody id="taskList">
+    <tr>
+      <td>Task 1</td>
+      <td>In Progress</td>
+      <td>High</td>
+      <td>2023-06-15</td>
+      <td>75%</td>
+      <td>Additional notes for Task 1</td>
+      <td>
+        <button class="complete-btn">Complete</button>
+        <button class="delete-btn">Delete</button>
+      </td>
+    </tr>
+    <tr>
+      <td>Task 2</td>
+      <td>Not Started</td>
+      <td>Medium</td>
+      <td>2023-06-18</td>
+      <td>0%</td>
+      <td>Additional notes for Task 2</td>
+      <td>
+        <button class="complete-btn">Complete</button>
+        <button class="delete-btn">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+  <script src="index.js"></script>
+</body>
+</html>
